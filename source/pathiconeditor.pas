@@ -11,7 +11,8 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, ExtCtrls,
-  tdCtrls, Dialogs, RegExpr,
+  StdCtrls,
+  Dialogs, RegExpr,
 
   Codebot.Graphics,
   Codebot.Graphics.Types,
