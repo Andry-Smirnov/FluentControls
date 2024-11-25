@@ -93,3 +93,6 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
+
+# MacOS thumbnails
+.DS_Store
