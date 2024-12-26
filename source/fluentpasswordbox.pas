@@ -10,8 +10,9 @@ unit FluentPasswordBox;
 interface
 
 uses
-  Classes, Controls, Graphics,
-
+  Classes,
+  Controls,
+  Graphics,
   Codebot.System,
   CustomTextBox,
   FluentIconButton;
@@ -138,10 +139,10 @@ begin
   if isHide then
   begin
     if FPasswordChar = '' then
-      ch:= '●'
+      ch:= '*'//'●'
     else
       ch:= FPasswordChar[1];
-  end
+  end;
   Edit.PasswordChar:= ch;
   Invalidate;
 end;
@@ -229,7 +230,8 @@ end;
 procedure TCustomPasswordBox.FontChanged(Sender: TObject);
 begin
   inherited FontChanged(Sender);
-  FButton.PathIcon.ForegroundColor:= Lighten(Font.Color, 80/255).Color;
+  //TODO: use library procedure PercentColor 29.11.2024
+  FButton.PathIcon.ForegroundColor:= Font.Color;//Lighten(Font.Color, 80/255).Color;
 end;
 
 procedure TCustomPasswordBox.ButtonMouseDown(Sender: TObject;
